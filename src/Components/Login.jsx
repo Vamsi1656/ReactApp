@@ -19,11 +19,13 @@ import React, { Component } from 'react'
       <div>
         <h1>Login Form</h1>
         <pre>{JSON.stringify(this.state)}</pre>
+        <form >
         <label>Email:</label>
-        <input type="text" onChange={this.emailHandler} /><br /><br />
+        <input type="text" onChange={this.emailHandler}  /><br /><br />
         <label>Password:</label>
-        <input type="text" onChange={this.passwordHandler} /><br /><br />
+        <input type="text" onChange={this.passwordHandler}  /><br /><br />
         <input type="submit" value="Login" />
+        </form>
     </div>
     )
   }
