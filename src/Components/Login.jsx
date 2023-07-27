@@ -23,15 +23,30 @@ import React, { Component } from 'react'
   render() {
     return (
       <div>
-        <h1>Login Form</h1>
-        <pre>{JSON.stringify(this.state)}</pre>
-        <form className='form-group' >
-        <label>Email:</label>
-        <input type="text" onChange={this.emailHandler} className='form-control'  /><br /><br />
-        <label>Password:</label>
-        <input type="text" onChange={this.passwordHandler}className='form-control'  /><br /><br />
-        <input type="submit" value="Login" />
-        </form>
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <div className="card">
+              <h1>Login Form</h1>
+                    <pre>{JSON.stringify(this.state)}</pre>
+                   
+                    <form>
+                    <div className='form-group'>
+                    <label>Email:</label>
+                    <input type="text" onChange={this.emailHandler} className='form-control'  /><br />
+                    </div>
+                    <div className='form-group'>
+                    <label>Password:</label>
+                    <input type="text" onChange={this.passwordHandler}className='form-control'  /><br /><br />
+                    </div>
+                    <input type="submit" value="Login" />
+                    
+                    </form>
+                    
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     )
   }
