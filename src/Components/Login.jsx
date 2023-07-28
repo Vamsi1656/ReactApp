@@ -6,18 +6,14 @@ import React, { Component } from 'react'
           email:"",
           password:""
          }
-         emailHandler=(event)=>{
-         
-          this.setState({email:event.target.value})
-         }
-         passwordHandler=(event)=>{
-        
-          this.setState({password:event.target.value})
-         }
+          UpdateHandler=(event)=>{
+
+            this.setState({[event.target.name]: event.target.value})
+          }
          submitHandler=(event)=>{
 
-          event.preventdefault()
-          console.log(this.state)
+          event.preventDefault()
+           console.log(this.state)
 
          }
   render() {
@@ -30,17 +26,18 @@ import React, { Component } from 'react'
               <h1>Login Form</h1>
                     <pre>{JSON.stringify(this.state)}</pre>
                    
-                    <form>
+                    <form onSubmit={this.submitHandler}>
                     <div className='form-group'>
                     <label>Email:</label>
-                    <input type="text" onChange={this.emailHandler} className='form-control'  /><br />
+                    <input type="text" name="email" onChange={this.UpdateHandler} className='form-control'  /><br />
                     </div>
                     <div className='form-group'>
                     <label>Password:</label>
-                    <input type="text" onChange={this.passwordHandler}className='form-control'  /><br /><br />
+                    <input type="text" name="password" onChange={this.UpdateHandler}className='form-control'  /><br /><br />
                     </div>
+                   
                     <input type="submit" value="Login" />
-                    
+                   
                     </form>
                     
               </div>
