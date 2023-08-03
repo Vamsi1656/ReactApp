@@ -1,49 +1,122 @@
-import React, { Component } from 'react'
-import {Link,BrowserRouter as Router,Routes,Route } from 'react-router-dom'
-import Home from './Components/Home';
-import About from './Components/About';
-import Services from './Components/Services';
-import Contact from './Components/Contact';
-import Login from './Components/Login'
+// import { useState } from "react"
+// function Demo() {
+//   const [show,setshow]=useState(false)
+//   const getPasswordHandler=()=>{
 
-
-class Navbar extends Component {
-  render() {
-    return (
-       
+//       setshow(!show)
+//   }
+// return (
+//   <div>Password
       
-        <Router>
-          <nav className='navbar navbar-dark bg-dark navbar-expand-lg'>
-            <Link to='#' className='navbar-brand'> React Application </Link>
-              <div className='ml-auto'>
-                <ul className='navbar-nav'>
-                  <li className='nav-list'><Link  to='/home'className='nav-link'>Home</Link></li>
-                  <li className='nav-list'><Link to='/about' className='nav-link'>About</Link></li>
-                  <li className='nav-list'><Link to='/services' className='nav-link'>Services</Link></li>
-                  <li className='nav-list'><Link to='/contact' className='nav-link'>Contact</Link></li>
-                  <li className='nav-list'><Link to='/login' className='nav-link'>Login</Link></li>
-                </ul>
-              </div>
-          </nav>
-         <Routes>
-         
-              <Route path='/home' element={<Home/>}></Route>
-              <Route path='/about' element={<About/>}></Route>
-              <Route path='/services' element={<Services/>}></Route>
-              <Route path='/contact' element={<Contact/>}></Route>
-              <Route path='/login' element={<Login/>}></Route>
-              
-         
-         </Routes>
-         
-         </Router>
+//       <input type={show?"text":"password"} />
+//       <button onClick={getPasswordHandler}>{show?"Hide":"Show"}</button>  
+//   </div>
+  
+// )
+// }
+// export default Demo
+
+// import { useState } from "react"
+// function Login() {
+//   const [show,setshow]=useState(false)
+//   const getPasswordHandler=()=>{
+
+//       setshow(!show)
+//   }
+// return (
+   
+//       <div className="container">
+//           <div className="row">
+//             <div className="col-6">
+//               <div className="card">
+//               <h1>Login Form</h1>
+                    
+                   
+//                     <form onSubmit={this.submitHandler}>
+//                     <div className='form-group'>
+//                     <label>Email:</label>
+//                     <input type="text" name="email" onChange={this.UpdateHandler} className='form-control'  /><br />
+//                     </div>
+//                     <div className='form-group'>
+//                     <label>Password:</label>
+//                     <input type="text" name="password" onChange={this.UpdateHandler}className='form-control'  /><br /><br />
+//                     </div>
+//                     <div>Password
+                    
+//                     <input type={show?"text":"password"} />
+//                     <button onClick={getPasswordHandler}>{show?"Hide":"Show"}</button>
+//                     </div>
+                                
+//                     <input type="submit" value="Login" />
+                   
+//                     </form>
+                    
+//               </div>
+//             </div>
+//           </div>
+//         </div> 
+ 
+  
+// )
+// }
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react'
+// import { useState } from "react"
+// const Login = () => {
+//   const [show,setshow]=useState(false)
+//      const getPasswordHandler=()=>{
+  
+//         setshow(!show)
+//     }
+//     UpdateHandler=()=>{
+
+      
+//     }
+
+//   return (
+//     <div>
+//       <h2>Login</h2>
+//       <div className="conatiner">
+//         <div className="row">
+//           <div className="col">
+//           <form>
+//                     <div className='form-group'>
+//                     <label>Email:</label>
+//                      <input type="text" name="email" onChange={this.UpdateHandler} className='form-control'  /><br />
+//                     </div>
+//                      <div className='form-group'>
+//                      <label>Password:</label>
+//                      <input type="text" name="password" onChange={this.UpdateHandler}className='form-control'  /><br /><br />
+//                     </div>
+//                      <div>Password
+                    
+//                      <input type={show?"text":"password"} />
+//                      <button onClick={getPasswordHandler}>{show?"Hide":"Show"}</button>
+//                      </div>
+                                
+//                      <input type="submit" value="Login" />
+                   
+//                      </form>
+//           </div>
+//         </div>
+//       </div>
+//       <input type={show?"text":"password"} />
+//       <button onClick={getPasswordHandler}>{show?"Hide":"Show"}</button>  
+//     </div>
+//   )
+// }
+
+// export default Login
     
-    
-    )
-  }
-}
-
-export default Navbar
-
-
+  
 
